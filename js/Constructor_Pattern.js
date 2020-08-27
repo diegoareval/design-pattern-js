@@ -1,5 +1,5 @@
 
-class Hero {
+class Employe {
   constructor(name, specialAbility, skill) {
     // setting property values
     this._name = name;
@@ -19,7 +19,7 @@ class Hero {
 }
 
 // creating new instances of Hero
-const Hulk = new Hero('Hulk', 'Jump', "Strong");
+const Ing = new Employe('David Ortiz', 'Develop Software', "A good professional");
 
-// console.log(Hulk.getDetails());
-console.log(Hulk.getSkills());
+console.log(Ing.getDetails());
+console.log(Ing.getSkills());
