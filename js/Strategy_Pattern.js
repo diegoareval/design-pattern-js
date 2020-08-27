@@ -1,61 +1,61 @@
 // encapsulation
 class Commute {
-  travel(transport) {
-    return transport.travelTime();
+  work(job) {
+    return job.workTime();
   }
 }
 
-class AnyTransport {
-  travelTime() {
-    return this._timeTaken;
+class AnyJob {
+  workTime() {
+    return this._timeWork;
   }
 }
 
 // strategy 1
-class Bus extends AnyTransport {
+class Dev extends AnyJob {
   constructor() {
     super();
-    this._timeTaken = 10;
+    this._timeWork = 10;
   }
 }
 
 // strategy 2
-class Taxi extends AnyTransport {
+class Manager extends AnyJob {
   constructor() {
     super();
-    this._timeTaken = 5;
+    this._timeWork = 5;
   }
 }
 
 // strategy 3
-class PersonalCar extends AnyTransport {
+class Secretary extends AnyJob {
   constructor() {
     super();
-    this._timeTaken = 3;
+    this._timeWork = 3;
   }
 }
 
 // strategy 4
-class AirPlane extends AnyTransport {
+class Counter extends AnyJob {
   constructor() {
     super();
-    this._timeTaken = 1;
+    this._timeWork = 1;
   }
 }
 
 // strategy 5
-class Bike extends AnyTransport {
+class MBA extends AnyJob {
   constructor() {
     super();
-    this._timeTaken = 2;
+    this._timeWork = 2;
   }
 }
 
 // usage
 const commute = new Commute();
 
-console.log(commute.travel(new Taxi())); // 5
-console.log(commute.travel(new Bus())); // 10
-console.log(commute.travel(new PersonalCar())); // 3
-console.log(commute.travel(new AirPlane()));  //1
-console.log(commute.travel(new Bike()));  // 2
+console.log(commute.work(new Dev())); // 5
+console.log(commute.work(new Manager())); // 10
+console.log(commute.work(new Secretary())); // 3
+console.log(commute.work(new Counter()));  //1
+console.log(commute.work(new MBA()));  // 2
